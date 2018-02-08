@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.springboot.domain.Task;
-import br.com.springboot.repository.TaskRepository;
 import br.com.springboot.service.TaskService;
 
 @RestController
