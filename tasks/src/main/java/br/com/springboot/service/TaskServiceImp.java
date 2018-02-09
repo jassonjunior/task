@@ -17,7 +17,9 @@ public class TaskServiceImp implements TaskService {
 
 	@Override
 	public Iterable<Task> list() {
+		System.out.println("Teste");
 		return taskrepository.findAll();
+		
 	}
 
 	@Override
