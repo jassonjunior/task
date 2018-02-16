@@ -1,3 +1,12 @@
-<p>
-  tasks-list works!
-</p>
+<ul class="list-group">
+  <li *ngFor="let task of tasks" class="list-group-item">
+    <div class="task-checkbox">
+      <input type="checkbox" class="list-child" 
+                              (change)="onTaskChance($event, task)"
+                              [checked]="task.finalizado">
+      <span ngClass="{{task.finalizado ? 'nome completed' : 'nome'}}">{{task.nome}}</span>
+      <span class="label {{getDataVencimentoLabel(task)}} pull-right">{{task.dataVencimento}}</span>
+    </div>
+  </li>
+  
+</ul>
