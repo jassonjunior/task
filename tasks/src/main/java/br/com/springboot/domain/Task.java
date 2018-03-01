@@ -19,24 +19,13 @@ public class Task {
 	@Id
 	@GeneratedValue
 	private long id;
-	
 	private String nome;
-	@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonFormat(pattern="MM/dd/yyyy")
 	private LocalDate dataVencimento;
-	
 	private Boolean finalizado;
 
 	public Task() {
+		
 	}
-
-	public Task(long id, String nome, LocalDate dataVencimento, boolean finalizado) {
-		this.id = id;
-		this.nome = nome;
-		this.dataVencimento = dataVencimento;
-		this.finalizado = finalizado;
-	}
-	
-	
-	
 	
 }

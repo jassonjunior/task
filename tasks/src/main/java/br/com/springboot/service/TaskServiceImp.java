@@ -18,7 +18,6 @@ public class TaskServiceImp implements TaskService {
 	@Override
 	public Iterable<Task> list() {
 		return taskrepository.findAll();
-		
 	}
 
 	@Override

@@ -19,6 +19,7 @@ export class TasksListComponent implements OnInit {
     return this.taskService.getTasks()
             .subscribe(
               (tasks: Task[]) => {
+                console.log(tasks);
                 this.tasks = tasks
               },
               (error) => console.log(error)

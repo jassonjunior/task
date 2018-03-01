@@ -24,6 +24,7 @@ public class TaskController {
 
 	@GetMapping(value={"", "/"})
 	public Iterable<Task> list(){
+		Iterable<Task> list = taskService.list();
 		return taskService.list(); 
 	}
 	
