@@ -1,5 +1,6 @@
 package br.com.springboot.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +22,7 @@ public class TaskController {
 	}
 
 
-
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(value={"", "/"})
 	public Iterable<Task> list(){
 		Iterable<Task> list = taskService.list();
