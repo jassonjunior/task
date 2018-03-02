@@ -20,7 +20,7 @@ public class Task {
 	@GeneratedValue
 	private long id;
 	private String nome;
-	@JsonFormat(pattern="MM/dd/yyyy")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="MM-dd-yyyy")
 	private LocalDate dataVencimento;
 	private Boolean finalizado;
 

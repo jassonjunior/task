@@ -12,7 +12,7 @@ export class TaskService {
 
   getTasks(): Observable<Task[]>{
     return this.http
-      .get('http://localhost:8080/api/tasks')
+      .get('/api/tasks', )
       .map(res => res.json())
   }
 

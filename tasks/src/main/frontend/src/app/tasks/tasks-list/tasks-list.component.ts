@@ -20,7 +20,8 @@ export class TasksListComponent implements OnInit {
             .subscribe(
               (tasks: Task[]) => {
                 console.log(tasks);
-                this.tasks = tasks
+                this.tasks = tasks;
+                console.log(this.tasks[0].dataVencimento);
               },
               (error) => console.log(error)
             );
